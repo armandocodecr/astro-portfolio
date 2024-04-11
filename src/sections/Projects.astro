@@ -1,0 +1,26 @@
+---
+import Code from "../assets/icons/Code.astro"
+import ProjectCard from "../components/Projects/ProjectCard.astro"
+import { proyectsData } from "../constants/Projects"
+---
+
+<section class="w-full flex flex-col justify-start" id="proyectos">
+    <div class="flex gap-3 items-center">
+        <Code />
+        <h2 class="text-3xl text-black/80 font-bold dark:text-white">Projects</h2>
+    </div>
+
+    {
+        proyectsData.map(project => (
+            <ProjectCard 
+                imageUrl={project.image} 
+                link={project.link}
+                description={project.description}
+                video={project.video}
+                name={project.title}
+                github={project.github}
+                technologys={project.technologys}
+            />
+        ))
+    }
+</section>

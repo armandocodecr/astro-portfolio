@@ -1,0 +1,13 @@
+---
+const { Icon, text, widthIcon, href, heigthIcon, styles } = Astro.props;
+---
+
+<a
+  href={href}
+  class={styles}
+  rel="noopener"
+  target="_blank"
+>
+  <Icon width={widthIcon} heigth={heigthIcon} />
+  {text}
+</a>

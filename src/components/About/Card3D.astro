@@ -1,0 +1,60 @@
+---
+import Tiktok from "../../assets/icons/Tiktok.astro";
+import Twitch from "../../assets/icons/Twitch.astro";
+import Instagram from "../../assets/icons/Instagram.astro";
+---
+
+<div class="w-full flex flex-col gap-10 bg-[#030712] mt-10 md:flex-row">
+  <div class="w-full flex items-center flex-col md:w-[30%]">
+    <picture class="w-full flex justify-center items-center pb-2">
+        <img
+          src="/foto.webp"
+          alt="my profile"
+          width="1200"
+          height="1600"
+          class="object-cover rounded-lg w-[200px] md:w-full"
+        />
+    </picture>
+    <ul class="w-[200px] justify-between flex gap-2 md:w-full">
+      <li>
+        <a href="https://www.tiktok.com/@armandocode" target="_blank">
+          <Tiktok class="fill-white duration-100 hover:fill-pink-600" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.twitch.tv/armandocodecr" target="_blank">
+          <Twitch class="fill-white duration-100 hover:fill-[#8B44F7]" />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/armandocodecr/" target="_blank">
+          <Instagram class="fill-white duration-100 hover:fill-[#F78944]" />
+        </a>
+      </li>
+    </ul>
+  </div>
+  <article class="w-full flex flex-col gap-5 justify-center items-center md:w-[70%]">
+    <p>
+      👨‍💻 22 años. Soy de <strong class="cr-strong">Costa Rica</strong>. Desde que era pequeño la tecnología y los computadores
+      siempre me han llamado la atención. Hoy en día, después de estar años preparandome, estoy viviendo mis primeras
+      experiencias profesionales como <em class="text-yellow-300 inline">Desarrollador de Software.</em>
+    </p>
+    <p>
+      Personalmente, <em class="text-orange-300 inline">soy una persona al que le sastiface ser resoluctivo</em>. Lo cual hace que me genere mucha sastifacción
+      ver cómo mis aplicaciones reducen la carga de trabajo de distintas áreas de la empresa a la cual trabajo actualmente.
+    </p>
+    <p>
+      Una de mis mayores virtudes es que soy una persona que <em class="text-sky-500 inline">siempre busca adaptarse a distintas situaciones o retos que se
+      presenten</em>. Soy capáz de aprender y resolver lo que me proponga por mi propia cuenta, ya que para mi el aprendizaje constante
+      es una de las capacidades más necesarias para crecer y ser valioso dentro de la industria del <em class="text-yellow-300">Desarrollador de Software.</em>
+    </p>
+  </article>
+</div>   
+
+<style>
+  .cr-strong{
+    background: linear-gradient(45deg, rgba(20,38,190,1) 9%, rgba(255,255,255,1) 44%, rgba(208,0,0,1) 80%);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+</style>

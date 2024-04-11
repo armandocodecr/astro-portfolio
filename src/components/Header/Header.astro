@@ -1,0 +1,110 @@
+
+---
+import ThemeToggle from "./ThemeToggle.astro"
+import {NavMenuToggle} from "./NavMenuToggle"
+
+const navItems = [
+  {
+    title: "Experiencia",
+    label: "experiencia",
+    url: "/#experiencia",
+  },
+  {
+    title: "Proyectos",
+    label: "proyectos",
+    url: "/#proyectos",
+  },
+  {
+    title: "Sobre mi",
+    label: "sobre-mi",
+    url: "/#sobre-mi",
+  },
+  {
+    title: "Blog",
+    label: "blog",
+    url: "https://blog-armandocode.vercel.app/",
+  },
+]
+---
+
+<header
+  class="fixed top-0 z-10 flex items-center w-full max-w-[800px] mt-2"
+>
+  <nav
+    class="flex w-full text-sm font-medium rounded-full text-gray-600 gap-10 dark:text-gray-200 justify-between items-center"
+  >
+    <div class="gap-5 hidden md:flex">
+        {
+          navItems.map((link) => (
+            <a
+              class="relative block py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+              aria-label={link.label}
+              href={link.url}
+            >
+              {link.title}
+            </a>
+          ))
+        }
+    </div>
+    <div class="inline-block md:hidden">
+      <NavMenuToggle client:load />
+    </div>
+    <ThemeToggle />
+  </nav>
+</header>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const sections = document.querySelectorAll("section")
+    const navItems = document.querySelectorAll("header nav a")
+
+    const callback = (entries: any[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navItems.forEach((item) => {
+            if (item.getAttribute("aria-label") == entry.target.id) {
+              item.classList.add("text-yellow-500")
+            } else {
+              item.classList.remove("text-yellow-500")
+            }
+          })
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
+    })
+
+    sections.forEach((section) => {
+      observer.observe(section)
+    })
+
+    // Cleanup function
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect()
+      } else {
+        sections.forEach((section) => {
+          observer.observe(section)
+        })
+      }
+    }
+  })
+</script>
+
+<style>
+  nav {
+    animation: nav-shadown 1s linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  }
+
+  @keyframes nav-shadown {
+    to {
+      @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 px-5 bg-gray-900/80 ring-white/10;
+    }
+  }
+</style>

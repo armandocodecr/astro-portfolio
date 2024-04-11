@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets"
+import CardLink from "../UI/CardLink.astro"
+import Link from "../../assets/icons/Link.astro"
+import Github from "../../assets/icons/Github.astro"
+import Video from "../../assets/icons/Video.astro"
+
+const { imageUrl, link, description, video, name, github, technologys } = Astro.props
+---
+
+<article class="w-full mt-14 gap-5 flex relative flex-col md:flex-row">
+    <picture class=`w-full relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out ^
+        transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:w-[50%] md:group-hover:shadow-2xl 
+        lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50`>
+        <Image src={imageUrl} alt="" inferSize={true} class=`object-cover object-top w-full h-56 transition duration-500
+        sm:h-full md:scale-110 md:group-hover:scale-105` />
+    </picture>
+    <div class="w-full flex flex-col gap-3 md:w-[50%]">
+        <h3 class="text-2xl text-black/80 font-bold dark:text-white">
+            { name }
+        </h3>
+        <ul class="grid grid-cols-3 gap-3 grid-rows-1">
+            {
+                technologys.map((technology: any) => (
+                    <li>
+                        <span class={`${technology.class} rounded-full self-start flex items-center justify-center gap-2 py-1 px-2`}>
+                            <technology.icon width="16" height="16" />
+                            <p class="font-medium text-xs">{technology.name}</p>
+                        </span>
+                    </li>
+                ))
+            }
+        </ul>
+        <p class="text-black/80 text-sm text-pretty dark:text-white/80">{description}</p>
+        <ul class="grid grid-cols-2 grid-rows-2 gap-2 items-center sm:grid-cols-3 sm:grid-rows-1">
+            <li>
+                <CardLink 
+                    Icon={Link} 
+                    href={link}
+                    text="Preview" 
+                    widthIcon="20" 
+                    heigthIcon="20" 
+                    styles=`px-4 py-2 flex gap-2 items-center justify-center rounded-lg border scale-100 border-[#4b5563] duration-75
+                    bg-[#1F2937] dark:text-white hover:scale-105`
+                />
+            </li>
+            <li>
+                <CardLink 
+                    Icon={Github} 
+                    href={github}
+                    text="Preview" 
+                    widthIcon="20" 
+                    heigthIcon="20" 
+                    styles=`px-4 py-2 flex gap-2 items-center justify-center rounded-lg border scale-100 border-[#4b5563] duration-75
+                    bg-[#1F2937] dark:text-white hover:scale-105`
+                />
+            </li>
+            {
+                video && (
+                    <li>
+                        <CardLink 
+                            Icon={Video} 
+                            href={video}
+                            text="Video" 
+                            widthIcon="20" 
+                            heigthIcon="20" 
+                            styles={`px-4 py-2 flex gap-2 items-center justify-center rounded-lg border scale-100 border-[#4b5563] duration-75
+                            bg-[#1F2937] dark:text-white hover:scale-105`}
+                        />
+                    </li>
+                )
+            }
+        </ul>
+    </div>
+</article>

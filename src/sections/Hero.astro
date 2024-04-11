@@ -1,0 +1,63 @@
+---
+import { Image } from 'astro:assets';
+
+import LinkedIn from "../assets/icons/LinkedIn.astro"
+import Github from "../assets/icons/Github.astro"
+import Mail from "../assets/icons/Mail.astro"
+import CardLink from '../components/UI/CardLink.astro';
+---
+
+<section class="py-32">
+    <Image 
+        src="/pixelart.png" 
+        alt="My pixelart profile" 
+        width={1024} 
+        height={1024} 
+        class="max-w-[100px]"
+    />
+    <article class="flex flex-col gap-4 mt-6">
+        <h1 class="opacity-90 text-4xl font-bold text-black/80 dark:text-white">Armando Cortés Murillo</h1>
+        <p class="opacity-70 text-pretty text-lg dark:text-white">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis repudiandae quos ad molestiae ipsum eveniet maxime sit doloribus modi, possimus dolores ipsam facere officiis enim tempora id ipsa eos quo.</p>
+    </articl>
+
+    <nav class="flex gap-5 mt-6 container-cards">
+        <CardLink 
+            Icon={LinkedIn} 
+            href="#" 
+            text="Linkedin" 
+            widthIcon="20" 
+            heigthIcon="20" 
+            styles="px-4 py-2 flex gap-2 items-center justify-start rounded-full border border-[#4b5563] bg-[#1F2937] dark:text-white"
+        />
+        <CardLink 
+            Icon={Github} 
+            href="#" 
+            text="Github" 
+            widthIcon="20" 
+            heigthIcon="20" 
+            styles="px-4 py-2 flex gap-2 items-center justify-start rounded-full border border-[#4b5563] bg-[#1F2937] dark:text-white"
+        />
+        <CardLink 
+            Icon={Mail} 
+            href="#" 
+            text="Contáctame" 
+            widthIcon="20" 
+            heigthIcon="20"
+            styles="px-4 py-2 flex gap-2 items-center justify-start rounded-full border border-[#4b5563] bg-[#1F2937] dark:text-white"
+        />
+    </n>
+</section>
+
+<style>
+  .container-cards{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(
+        100px,
+        175px
+      )
+    );
+  }
+</style>

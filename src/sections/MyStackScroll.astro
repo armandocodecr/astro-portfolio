@@ -1,0 +1,162 @@
+---
+import Typescript from "../assets/icons/Typescript.astro";
+import Github from "../assets/icons/Github.astro";
+import Git from "../assets/icons/Git.astro";
+import Docker from "../assets/icons/Docker.astro";
+import NestJS from "../assets/icons/NestJS.astro";
+import React from "../assets/icons/React.astro";
+import NextJS from "../assets/icons/NextJS.astro";
+import GraphQL from "../assets/icons/GraphQL.astro";
+import NodeJS from "../assets/icons/NodeJS.astro";
+import AstroIcon from "../assets/icons/AstroIcon.astro";
+---
+
+<section class="flex flex-col relative bg-[#040814] shadow-box gap-5 my-32">
+  <div class="stock-ticker">
+    <ul>
+      <li class="minus flex gap-3 items-center">
+        <Typescript width="32" heigth="32" />
+        <span class="text-2xl">Typescript</span>
+      </li>
+      <li class="minus flex gap-3 items-center">
+        <Github width="32" heigth="32" />
+        <span class="text-2xl">Github</span>
+      </li>
+      <li class="minus flex gap-3 items-center">
+        <Git width="32" heigth="32" />
+        <span class="text-2xl">Git</span>
+      </li>
+      <li class="minus flex gap-3 items-center">
+        <Docker width="32" heigth="32" />
+        <span class="text-2xl">Docker</span>
+      </li>
+      <li class="minus flex gap-3 items-center">
+        <NestJS width="32" heigth="32" />
+        <span class="text-2xl">NestJS</span>
+      </li>
+    </ul>
+
+    <ul aria-hidden="true">
+        <li class="minus flex gap-3 items-center">
+          <Typescript width="32" heigth="32" />
+          <span class="text-2xl">Typescript</span>
+        </li>
+        <li class="minus flex gap-3 items-center">
+          <Github width="32" heigth="32" />
+          <span class="text-2xl">Github</span>
+        </li>
+        <li class="minus flex gap-3 items-center">
+          <Git width="32" heigth="32" />
+          <span class="text-2xl">Git</span>
+        </li>
+        <li class="minus flex gap-3 items-center">
+          <Docker width="32" heigth="32" />
+          <span class="text-2xl">Docker</span>
+        </li>
+        <li class="minus flex gap-3 items-center">
+          <NestJS width="32" heigth="32" />
+          <span class="text-2xl">NestJS</span>
+        </li>
+      </ul>
+  </div>
+
+  <div class="stock-ticker">
+    <ul id="reverse">
+      <li class="minus flex gap-3 items-center">
+        <React width="32" heigth="32" />
+        <span class="text-2xl">React</span>
+      </li>
+      <li class="minus flex gap-3 items-center">
+        <NextJS width="32" heigth="32" />
+        <span class="text-2xl">NextJS</span>
+      </li>
+      <li class="minus flex gap-3 items-center">
+        <GraphQL width="32" heigth="32" />
+        <span class="text-2xl">GraphQL</span>
+      </li>
+      <li class="minus flex gap-3 items-center">
+        <NodeJS width="32" heigth="32" />
+        <span class="text-2xl">NodeJS</span>
+      </li>
+      <li class="minus flex gap-3 items-center">
+        <AstroIcon width="32" heigth="32" />
+        <span class="text-2xl">Astro</span>
+      </li>
+    </ul>
+
+    <ul id="reverse" aria-hidden="true">
+        <li class="minus flex gap-3 items-center">
+          <React width="32" heigth="32" />
+          <span class="text-2xl">React</span>
+        </li>
+        <li class="minus flex gap-3 items-center">
+          <NextJS width="32" heigth="32" />
+          <span class="text-2xl">NextJS</span>
+        </li>
+        <li class="minus flex gap-3 items-center">
+          <GraphQL width="32" heigth="32" />
+          <span class="text-2xl">GraphQL</span>
+        </li>
+        <li class="minus flex gap-3 items-center">
+          <NodeJS width="32" heigth="32" />
+          <span class="text-2xl">NodeJS</span>
+        </li>
+        <li class="minus flex gap-3 items-center">
+          <AstroIcon width="25" heigth="25" />
+          <span class="text-2xl">Astro</span>
+        </li>
+      </ul>
+  </div>
+  <div class="fade"></div>
+</section>
+
+<style>
+
+  .shadow-box{
+    -webkit-box-shadow: -1px 0px 66px 45px #040814;
+-moz-box-shadow: -1px 0px 66px 45px #040814;
+box-shadow: -1px 0px 66px 45px #040814;
+  }
+
+  .fade{
+    position: absolute;
+    background: linear-gradient(90deg, #040814, transparent 30%, transparent 70%, #040814);
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .stock-ticker {
+    font-size: 15px;
+    padding-block: 8px;
+    overflow: hidden;
+    user-select: none;
+    --gap: 20px;
+    display: flex;
+    gap: var(--gap);
+  }
+
+  .stock-ticker ul {
+    list-style: none;
+    flex-shrink: 0;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+    animation: scroll 20s linear infinite;
+  }
+
+  #reverse {
+    animation: scroll 20s linear reverse infinite !important;
+  }
+
+  @keyframes scroll {
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+
+  span {
+    font-weight: bold;
+  }
+</style>
