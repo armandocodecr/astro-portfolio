@@ -20,6 +20,42 @@ const { title, description } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<ViewTransitions />
+
+		 {/* Google / Search Engine Tags  */}
+		 <meta itemprop="name" content="Porfolio de Armando Cortés Murillo - Desarrollador y Programador Web con 15 años de experiencia" />
+		 <meta itemprop="description" content=`Contrata a Desarrollador de Software junior de Costa Rica con experiencia en la creación de soluciones tecnológicas innovadoras. Especializado en 
+		 optimizar operaciones empresariales mediante aplicaciones personalizadas. Apasionado por el aprendizaje continuo y la adaptación a nuevos retos 
+		 en el desarrollo de software. 👨‍💻` />
+		 <meta itemprop="image" content="https://res.cloudinary.com/dyuj1zglt/image/upload/v1712873518/portfolio-projects/npaofwzjkfmswfq43odb.png" />
+
+		 {/* Facebook Meta Tags */}
+		 <meta property="og:title" content={ title } />
+		 <meta property="og:url" content="https://armando-murillo.vercel.app/" />
+		 <meta property="og:type" content="website" />
+		 <meta property="og:description" content=`Contrata a Desarrollador de Software junior de Costa Rica con experiencia en la creación de soluciones tecnológicas innovadoras. Especializado en 
+		 optimizar operaciones empresariales mediante aplicaciones personalizadas. Apasionado por el aprendizaje continuo y la adaptación a nuevos retos 
+		 en el desarrollo de software. 👨‍💻`/>
+		 <meta property="description" content=`Contrata a Desarrollador de Software junior de Costa Rica con experiencia en la creación de soluciones tecnológicas innovadoras. Especializado en 
+		 optimizar operaciones empresariales mediante aplicaciones personalizadas. Apasionado por el aprendizaje continuo y la adaptación a nuevos retos 
+		 en el desarrollo de software. 👨‍💻` />
+		 <meta property="og:image" content="https://res.cloudinary.com/dyuj1zglt/image/upload/v1712873518/portfolio-projects/npaofwzjkfmswfq43odb.png" />
+
+		 <link
+		   rel="canonical"
+		   href={`https://armando-murillo.vercel.app/`}
+		 />
+
+		 {/* Twitter Meta Tags */}
+		 <meta name="twitter:site" content="@Armando_Code" />
+		 <meta name="twitter:creator" content="@Armando_Code" />
+		 <meta name="twitter:card" content="summary_large_image" />
+		 <meta name="twitter:title" content={ title } />
+		 <meta name="twitter:url" content="https://armando-murillo.vercel.app//" />
+		 <meta name="twitter:image" content="https://res.cloudinary.com/dyuj1zglt/image/upload/v1712873518/portfolio-projects/npaofwzjkfmswfq43odb.png" />
+		 <meta name="twitter:image:alt" content="ArmandoCode 👨‍💻 - Soy un simple desarrollador web que quiere compartir con los demás lo que aprende día con día. 👨‍💻" />
+		 <meta name="twitter:description" content=`Contrata a Desarrollador de Software junior de Costa Rica con experiencia en la creación de soluciones tecnológicas innovadoras. Especializado en 
+		 optimizar operaciones empresariales mediante aplicaciones personalizadas. Apasionado por el aprendizaje continuo y la adaptación a nuevos retos 
+		 en el desarrollo de software. 👨‍💻` />
 	</head>
 	<body class="relative text-black dark:text-white">
 		<div
