@@ -2,20 +2,12 @@
 import Tiktok from "../../assets/icons/Tiktok.astro";
 import Twitch from "../../assets/icons/Twitch.astro";
 import Instagram from "../../assets/icons/Instagram.astro";
+import Download from "../../assets/icons/Download.astro";
 ---
 
 <div class="w-full flex flex-col gap-10 bg-white mt-10 md:flex-row dark:bg-[#030712]">
   <div class="w-full flex items-center justify-center flex-col md:w-[30%]">
-    <picture class="flex justify-center p-1 w-[200px] items-center rounded-lg border border-[#0d1c4b7c] bg-stone-200 dark:bg-[#08122f38]">
-        <img
-          src="/foto.webp"
-          alt="my profile"
-          width="1200"
-          height="1600"
-          class="object-cover rounded-lg w-[200px] md:w-full"
-        />
-    </picture>
-    <ul class="w-[200px] py-1 px-2 rounded-xl mt-1 justify-between flex gap-2 border border-[#0d1c4b7c] bg-stone-200 dark:bg-[#08122f38] md:w-full">
+    <ul class="w-[200px] py-1 px-2 rounded-xl justify-between flex gap-2 border border-[#0d1c4b7c] bg-stone-200 dark:bg-[#08122f38] md:w-full">
       <li>
         <a href="https://www.tiktok.com/@armandocode" target="_blank">
           <Tiktok class="fill-black/80 dark:fill-white duration-100 hover:fill-pink-600" />
@@ -32,6 +24,24 @@ import Instagram from "../../assets/icons/Instagram.astro";
         </a>
       </li>
     </ul>
+    <picture class="flex mt-1 justify-center p-1 w-[200px] items-center rounded-lg border border-[#0d1c4b7c] bg-stone-200 dark:bg-[#08122f38] md:w-full">
+        <img
+          src="/foto.webp"
+          alt="my profile"
+          width="1200"
+          height="1600"
+          class="object-cover rounded-lg w-[200px] md:w-full"
+        />
+    </picture>
+    <a 
+      href="/download/Curriculum.pdf"
+      rel="noopener noreferrer" 
+      target='_blank'
+      class="w-[200px] py-1 px-2 rounded-xl mt-1 justify-center font-medium flex gap-2 border border-[#0d1c4b7c] bg-stone-200 dark:bg-[#08122f38] md:w-full"
+    >
+      <Download />
+      Curriculum
+    </a>
   </div>
   <article class="w-full flex flex-col gap-5 justify-center items-center md:w-[70%]">
     <p>
