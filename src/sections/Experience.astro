@@ -4,7 +4,7 @@ import { EXPERIENCE } from '../constants/Experience'
 
 function renderFormattedText(text: string) {
   return text.split('\n\n').map(paragraph => 
-    `<p class="text-base text-neutral-200 md:text-lg 2xl:text-xl whitespace-pre-wrap mb-4">${paragraph}</p>`
+    `<p class="text-base text-black/70 md:text-lg 2xl:text-xl whitespace-pre-wrap mb-4 dark:text-neutral-200">${paragraph}</p>`
   ).join('');
 }
 ---
@@ -32,7 +32,7 @@ function renderFormattedText(text: string) {
                   <div class="mb-4 text-pretty text-base text-neutral-200 md:text-lg 2xl:text-xl whitespace-pre-wrap" set:html={renderFormattedText(item.description)}></div>
                   <ul class="flex gap-4 m-0 pt-3 container-cards-stack-experience">
                     {item.stack?.map((stackItem) => (
-                      <li class="self-start bg-white/15 py-1 px-3 rounded-xl backdrop-blur-sm">
+                      <li class="self-start bg-stone-200 py-1 px-3 rounded-xl backdrop-blur-sm dark:bg-white/15">
                         <p>{stackItem}</p>
                       </li>
                     ))}
