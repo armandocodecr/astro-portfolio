@@ -5,11 +5,11 @@ export default {
 	theme: {
 		extend: {
 			boxShadow: {
-				custom: '-1px 0px 66px 45px #0A0E1D',
+				custom: '-1px 0px 66px 45px #17171C',
 				customWhite: '-1px 0px 66px 45px #ffffff',
 			},
 			backgroundImage: {
-				'fade': 'linear-gradient(90deg, #0A0E1D 0%, transparent 30%, transparent 70%, #0A0E1D 100%)',
+				'fade': 'linear-gradient(90deg, #17171C 0%, transparent 30%, transparent 70%, #17171C 100%)',
 				'fade-white': 'linear-gradient(90deg, #ffffff 0%, transparent 30%, transparent 70%, #ffffff 100%)',
 			},
 		},
