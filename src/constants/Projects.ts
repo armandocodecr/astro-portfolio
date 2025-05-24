@@ -3,10 +3,30 @@ import MongoDB from "../assets/icons/MongoDB.astro"
 import NestJS from "../assets/icons/NestJS.astro"
 import NextJS from "../assets/icons/NextJS.astro"
 import React from "../assets/icons/React.astro"
+import Rust from "../assets/icons/Rust.astro"
 import TailwindCSS from "../assets/icons/TailwindCSS.astro"
 import Typescript from "../assets/icons/Typescript.astro"
 
 export const proyectsData = [
+        {
+            title: 'Trustless Work',
+            description: 'Añade pagos por hitos a tu plataforma o app, sin tener que crear todo desde cero. Trustless Work ofrece una API lista para usar y lanzar depósitos en garantía seguros y programables con monedas estables. Diseñado para desarrolladores, con la confianza de las plataformas, listo para empresas.',
+            image: 'https://res.cloudinary.com/dyuj1zglt/image/upload/v1748033223/portfolio-projects/tgj7lwwcwtit5yz0cxz4.png',
+            link: 'https://www.trustlesswork.com/',
+            github: 'https://github.com/Trustless-Work',
+            technologys: [
+                {
+                    name: 'NextJS',
+                    class: 'bg-black text-white/90',
+                    icon: NextJS,
+                },
+                {
+                    name: "Rust",
+                    class: "bg-[#BC6222] text-white/90",
+                    icon: Rust,
+                },
+            ]
+        },
         {
             title: 'MovieAPP',
             description: 'Listado de películas, donde puedes buscar y ver detalles de las mismas. Todo esto manejado con una interfaz agradable y clara para cualquier usuario.',
@@ -92,25 +112,6 @@ export const proyectsData = [
                     name: 'Typescript',
                     class: 'bg-[#23568D] text-white/90',
                     icon: Typescript,
-                },
-            ]
-        },
-        {
-            title: 'GitHub Cards',
-            description: 'El proyecto permite visualizar y descargar una tarjeta con estadísticas de GitHub en 3D, usando solo el nombre de usuario, para servir como carta de presentación del perfil.',
-            image: 'https://res.cloudinary.com/dyuj1zglt/image/upload/v1688055012/portfolio-projects/fn4kxrz7lqzebxbilvlp.png',
-            link: 'https://devfinder-github-cards.vercel.app/',
-            github: 'https://github.com/armandocodecr/Devfinder-GithhubCards',
-            technologys: [
-                {
-                    name: 'NextJS',
-                    class: 'bg-black text-white/90',
-                    icon: NextJS,
-                },
-                {
-                    name: "TailwindCSS",
-                    class: "bg-[#003159] text-white/90",
-                    icon: TailwindCSS,
                 },
             ]
         },
