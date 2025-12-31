@@ -10,7 +10,7 @@ import Typescript from "../assets/icons/Typescript.astro"
 export const proyectsData = [
         {
             title: 'Trustless Work',
-            description: 'Añade pagos por hitos a tu plataforma o app, sin tener que crear todo desde cero. Trustless Work ofrece una API lista para usar y lanzar depósitos en garantía seguros y programables con monedas estables. Diseñado para desarrolladores, con la confianza de las plataformas, listo para empresas.',
+            description: 'Add milestone-based payments to your platform or app without building everything from scratch. Trustless Work offers a ready-to-use API to launch secure, programmable escrows with stablecoins. Built for developers, trusted by platforms, enterprise-ready.',
             image: 'https://res.cloudinary.com/dyuj1zglt/image/upload/v1748033223/portfolio-projects/tgj7lwwcwtit5yz0cxz4.png',
             link: 'https://www.trustlesswork.com/',
             github: 'https://github.com/Trustless-Work',
@@ -29,7 +29,7 @@ export const proyectsData = [
         },
         {
             title: 'STOCK ANALYZER',
-            description: 'Aplicación web que permite a los usuarios analizar y visualizar datos históricos de acciones bursátiles utilizando gráficos interactivos y herramientas de análisis técnico.',
+            description: 'Web application that allows users to analyze and visualize historical stock market data using interactive charts and technical analysis tools.',
             image: 'https://res.cloudinary.com/dyuj1zglt/image/upload/v1767192520/portfolio-projects/mvvki5ovb9x5cce0a0f5.png',
             link: 'https://us-stock-analyzer.vercel.app/',
             github: 'https://github.com/armandocodecr/stock-analyzer',
@@ -48,7 +48,7 @@ export const proyectsData = [
         },
         {
             title: 'MovieAPP',
-            description: 'Listado de películas, donde puedes buscar y ver detalles de las mismas. Todo esto manejado con una interfaz agradable y clara para cualquier usuario.',
+            description: 'Movie listing application where you can search and view details. All managed with a pleasant and clear interface for any user.',
             image: 'https://res.cloudinary.com/dyuj1zglt/image/upload/v1710636908/portfolio-projects/czcposhnk9ekytbktfkz.png',
             link: 'https://movie-app-2024-cm.vercel.app/',
             github: 'https://github.com/Armandocm19/movie-app',
@@ -66,8 +66,8 @@ export const proyectsData = [
             ],
         },
         {
-            title: 'Kapool (Clon de Kahoot)',
-            description: 'Este proyecto podrás crear tus partidas y conectarte en tiempo real con otros jugadores para jugar tus partida. Cuenta con un sistema de puntaje y clasificación, y diseño atractivo.',
+            title: 'Kapool (Kahoot Clone)',
+            description: 'In this project you can create your games and connect in real-time with other players to play your matches. It features a scoring and ranking system, along with an attractive design.',
             image: 'https://res.cloudinary.com/dyuj1zglt/image/upload/v1684262039/portfolio-projects/brbttmwqenvsocinibvn.png',
             link: 'https://kapool-react-frontend.vercel.app/',
             github: 'https://github.com/Armandocm19/kapool-react-frontend',
@@ -92,7 +92,7 @@ export const proyectsData = [
         },
         {
             title: 'Shopping List',
-            description: 'La aplicación facilita la creación de listas de compras, con funciones para autenticarse, listar ítems, y visualizar estadísticas de uso mediante gráficos, incluyendo una línea de tiempo de las listas.',
+            description: 'The application facilitates the creation of shopping lists, with features for authentication, listing items, and visualizing usage statistics through charts, including a timeline of lists.',
             image: 'https://res.cloudinary.com/dyuj1zglt/image/upload/v1691785152/portfolio-projects/Shoppinglist.png',
             link: 'https://shopping-list-2023.vercel.app/',
             github: 'https://github.com/armandocodecr/ShoppingList',
