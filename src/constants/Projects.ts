@@ -28,6 +28,25 @@ export const proyectsData = [
             ]
         },
         {
+            title: 'STOCK ANALYZER',
+            description: 'Aplicación web que permite a los usuarios analizar y visualizar datos históricos de acciones bursátiles utilizando gráficos interactivos y herramientas de análisis técnico.',
+            image: 'https://res.cloudinary.com/dyuj1zglt/image/upload/v1767192520/portfolio-projects/mvvki5ovb9x5cce0a0f5.png',
+            link: 'https://us-stock-analyzer.vercel.app/',
+            github: 'https://github.com/armandocodecr/stock-analyzer',
+            technologys: [
+                {
+                    name: 'NextJS',
+                    class: 'bg-black text-white',
+                    icon: NextJS,
+                },
+                {
+                    name: 'Typescript',
+                    class: 'bg-[#23568D] text-white/90',
+                    icon: Typescript,
+                },
+            ]
+        },
+        {
             title: 'MovieAPP',
             description: 'Listado de películas, donde puedes buscar y ver detalles de las mismas. Todo esto manejado con una interfaz agradable y clara para cualquier usuario.',
             image: 'https://res.cloudinary.com/dyuj1zglt/image/upload/v1710636908/portfolio-projects/czcposhnk9ekytbktfkz.png',
@@ -95,24 +114,5 @@ export const proyectsData = [
                 },
             ],
             video: 'https://youtu.be/D9G8okA7qmQ'
-        },
-        {
-            title: 'TRES EN RAYA',
-            description: 'Este proyecto es una versión del juego "Tres en Raya" con una interfaz simple y una lógica avanzada para manejar estados, detectando victorias, derrotas, o empates, y está diseñado para aumentar la dificultad de ganar para el usuario.',
-            image: 'https://res.cloudinary.com/dyuj1zglt/image/upload/v1675565063/portfolio-projects/rjve54majth1g8oyugos.png',
-            link: 'https://juego-tres-en-raya.vercel.app/',
-            github: 'https://github.com/Armandocm19/juego-tres-en-raya',
-            technologys: [
-                {
-                    name: 'React',
-                    class: 'bg-sky-400/60 text-white/90',
-                    icon: React,
-                },
-                {
-                    name: 'Typescript',
-                    class: 'bg-[#23568D] text-white/90',
-                    icon: Typescript,
-                },
-            ]
         },
     ]
