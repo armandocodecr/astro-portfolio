@@ -1,87 +1,45 @@
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
+const itemClassName =
+  'block px-4 py-2 text-sm text-black/90 dark:text-white/80 data-focus:bg-gray-500 data-focus:dark:bg-gray-600/90'
 
 export function NavMenuToggle() {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-semiboldshadow-sm text-black/80 dark:text-white/80">
+        <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md px-3 py-2 text-sm text-black/80 dark:text-white/80">
           Menu
           +
-        </Menu.Button>
+        </MenuButton>
       </div>
 
-      <Transition
-        as={Fragment}
-        enter="transition ease-out duration-100"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
+      <MenuItems
+        transition
+        className="absolute left-3 mt-1 z-10 w-56 origin-top-left backdrop-blur-sm rounded-md bg-white/80 shadow-lg ring-1 ring-white/10 focus:outline-hidden dark:bg-[#161C2C] transition data-closed:scale-95 data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in"
       >
-        <Menu.Items className="absolute left-3 mt-1 z-10 w-56 origin-top-left backdrop-blur rounded-md bg-white/80 shadow-lg ring-1 ring-white/10 ring-opacity-5 focus:outline-none dark:bg-[#161C2C]">
-          <div className="py-1">
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#experience"
-                  className={classNames(
-                    active ? 'bg-gray-500 text-black/90 dark:bg-gray-600/90 dark:text-white/80' : 'text-black/90 dark:text-white/80',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Experiencia
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#proyectos"
-                  className={classNames(
-                    active ? 'bg-gray-500 text-black/90 dark:bg-gray-600/90 dark:text-white/80' : 'text-black/90 dark:text-white/80',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Proyectos
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="#sobre-mi"
-                  className={classNames(
-                    active ? 'bg-gray-500 text-black/90 dark:bg-gray-600/90 dark:text-white/80' : 'text-black/90 dark:text-white/80',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Sobre mi
-                </a>
-              )}
-            </Menu.Item>
-            <Menu.Item>
-              {({ active }) => (
-                <a
-                  href="https://blog-armandocode.vercel.app/"
-                  target='_blank'
-                  className={classNames(
-                    active ? 'bg-gray-500 text-black/90 dark:bg-gray-600/90 dark:text-white/80' : 'text-black/90 dark:text-white/80',
-                    'block px-4 py-2 text-sm'
-                  )}
-                >
-                  Blog
-                </a>
-              )}
-            </Menu.Item>
-          </div>
-        </Menu.Items>
-      </Transition>
+        <div className="py-1">
+          <MenuItem>
+            <a href="#experience" className={itemClassName}>
+              Experiencia
+            </a>
+          </MenuItem>
+          <MenuItem>
+            <a href="#proyectos" className={itemClassName}>
+              Proyectos
+            </a>
+          </MenuItem>
+          <MenuItem>
+            <a href="#sobre-mi" className={itemClassName}>
+              Sobre mi
+            </a>
+          </MenuItem>
+          <MenuItem>
+            <a href="https://blog-armandocode.vercel.app/" target='_blank' className={itemClassName}>
+              Blog
+            </a>
+          </MenuItem>
+        </div>
+      </MenuItems>
     </Menu>
   )
 }

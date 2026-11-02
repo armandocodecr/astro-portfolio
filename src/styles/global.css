@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@plugin "@headlessui/tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--shadow-custom: -1px 0px 66px 45px #17171C;
+	--shadow-customWhite: -1px 0px 66px 45px #ffffff;
+}
+
+@utility bg-fade {
+	background-image: linear-gradient(90deg, #17171C 0%, transparent 30%, transparent 70%, #17171C 100%);
+}
+
+@utility bg-fade-white {
+	background-image: linear-gradient(90deg, #ffffff 0%, transparent 30%, transparent 70%, #ffffff 100%);
+}
