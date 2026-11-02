@@ -1,7 +1,8 @@
 ---
 import "@fontsource-variable/onest"
 import Header from "../components/Header/Header.astro";
-import { ViewTransitions } from "astro:transitions"
+import { ClientRouter } from "astro:transitions"
+import "../styles/global.css"
 interface Props {
 	title: string;
 	description: string;
@@ -22,7 +23,7 @@ const { title, description } = Astro.props;
 		<link rel="icon" href="/favicon.svg" type="image/x-icon">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<ViewTransitions />
+		<ClientRouter />
 
 		 {/* Google / Search Engine Tags  */}
 		 <meta itemprop="name" content="Porfolio de Armando Cortés Murillo - Desarrollador y Programador Web con 15 años de experiencia" />
